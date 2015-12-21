@@ -1,0 +1,24 @@
+This app compares various autocomplete apps for Django
+======================================================
+
+Item app
+--------
+
+We have 2 Users:
+
+- jpic with password testjpic
+- john with user testjohn
+
+We have 2 Items, which serve as root for subitems of their related user:
+
+- "jpic root item" with owner jpic,
+- "john root item" with owner john,
+
+We want users to be able to create and update Items which must have a parent
+that belongs to them. The specification is simple: jpic should not see "john
+root item" or any item belonging to john anywhere.
+
+To get started, authenticate as "jpic" in http://localhost:8000/admin
+
+Then, try the autocomplete-light form http://localhost:8000/item/al/create/ or
+the select2 form http://localhost:8000/item/s2/create/
